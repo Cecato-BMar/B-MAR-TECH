@@ -3,8 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>B-MAR Soluções em TI – Tecnologia & Desenvolvimento Web</title>
+<title>B-MAR Soluções em Tecnologia | Sites, Sistemas e Soluções Web</title>
+<meta name="description" content="B-MAR Soluções em Tecnologia cria sites, landing pages, sistemas e ferramentas web para empresas em São Vicente, Baixada Santista e todo o Brasil.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="B-MAR Soluções em Tecnologia">
+<meta name="theme-color" content="#020b18">
+<link rel="canonical" href="https://cecato-bmar.github.io/B-MAR-TECH/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="B-MAR Soluções em Tecnologia | Sites, Sistemas e Soluções Web">
+<meta property="og:description" content="Sites, landing pages, sistemas e ferramentas web para empresas em São Vicente, Baixada Santista e todo o Brasil.">
+<meta property="og:url" content="https://cecato-bmar.github.io/B-MAR-TECH/">
+<meta property="og:site_name" content="B-MAR Soluções em Tecnologia">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B-MAR Soluções em Tecnologia">
+<meta name="twitter:description" content="Sites, landing pages, sistemas e ferramentas web para empresas em São Vicente, Baixada Santista e todo o Brasil.">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "B-MAR Soluções em Tecnologia",
+  "url": "https://cecato-bmar.github.io/B-MAR-TECH/",
+  "description": "Desenvolvimento de sites, landing pages, sistemas e ferramentas web.",
+  "telephone": "+55-13-99606-4559",
+  "email": "contato@bmarsolucoesti.com.br",
+  "areaServed": ["São Vicente", "Baixada Santista", "Brasil"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "São Vicente",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "sameAs": ["https://github.com/Cecato-BMar"]
+}
+</script>
 <style>
 /* ───── TOKENS ───── */
 :root {
@@ -117,6 +150,21 @@ section { position:relative; z-index:1; }
 .proj-info h3 { font-family:'Orbitron',monospace; font-size:.88rem; font-weight:700; color:#fff; margin-bottom:.5rem; }
 .proj-info p { font-size:.82rem; opacity:.62; line-height:1.7; }
 .proj-link { display:inline-flex; align-items:center; gap:.4rem; margin-top:1rem; font-size:.7rem; letter-spacing:2px; text-transform:uppercase; color:var(--cyan); font-family:'Orbitron',monospace; transition:gap .2s; }
+
+/* Galeria de portfólio com capturas dos projetos */
+.port-grid { display:none; }
+.portfolio-gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+.portfolio-item { display:block; overflow:hidden; text-decoration:none; color:inherit; border:1px solid rgba(0,212,255,.16); border-radius:4px; background:rgba(4,21,38,.7); transition:transform .3s,border-color .3s; }
+.portfolio-item:hover { transform:translateY(-5px); border-color:rgba(0,212,255,.55); }
+.portfolio-shot { height:190px; overflow:hidden; background:var(--mid); position:relative; }
+.portfolio-shot::after { content:''; position:absolute; inset:auto 0 0; height:42%; background:linear-gradient(transparent,rgba(2,11,24,.38)); }
+.portfolio-shot img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .35s; }
+.portfolio-item:hover .portfolio-shot img { transform:scale(1.04); }
+.portfolio-copy { padding:1.2rem 1.3rem 1.35rem; }
+.portfolio-kind { color:var(--cyan); font-family:'Orbitron',monospace; font-size:.57rem; letter-spacing:1.7px; text-transform:uppercase; }
+.portfolio-copy h3 { color:#fff; font-family:'Orbitron',monospace; font-size:.84rem; margin:.55rem 0 .45rem; }
+.portfolio-copy p { font-size:.78rem; opacity:.66; line-height:1.7; margin:0; }
+.portfolio-open { display:block; color:var(--cyan); font-family:'Orbitron',monospace; font-size:.62rem; letter-spacing:1.5px; margin-top:1rem; text-transform:uppercase; }
 
 /* Card destaque — ocupa as 2 colunas */
 .proj-featured {
@@ -256,6 +304,7 @@ footer p { font-size:.68rem; opacity:.28; letter-spacing:1px; text-align:right; 
   #servicos,#portfolio,#sobre,#processo,#contato { padding:5rem 1.5rem; }
   .srv-grid { grid-template-columns:1fr; }
   .port-grid { grid-template-columns:1fr; }
+  .portfolio-gallery { grid-template-columns:1fr; }
   .proj-featured { grid-template-columns:1fr; }
   .feat-vis { height:240px; }
   .feat-info { padding:1.8rem; }
@@ -383,6 +432,21 @@ footer p { font-size:.68rem; opacity:.28; letter-spacing:1px; text-align:right; 
     <div class="port-head reveal">
       <span class="sec-label">// Trabalhos realizados</span>
       <h2 class="sec-title">Portfólio Real —<br><span style="color:var(--cyan)">Resultados que falam</span></h2>
+    </div>
+
+    <div class="portfolio-gallery">
+      <a class="portfolio-item reveal" href="https://www.aquitemnegocios.com.br/" target="_blank" rel="noopener"><div class="portfolio-shot"><img src="assets/portfolio/aquitem.jpg" alt="AquiTem Negócios"></div><div class="portfolio-copy"><span class="portfolio-kind">Plataforma local</span><h3>AquiTem Negócios</h3><p>Guia comercial digital para empresas e serviços locais.</p><span class="portfolio-open">Visitar projeto →</span></div></a>
+      <a class="portfolio-item reveal" href="https://calculadora-do-pedreiro.vercel.app/" target="_blank" rel="noopener"><div class="portfolio-shot"><img src="assets/portfolio/calculadora.jpg" alt="Calculadora do Pedreiro"></div><div class="portfolio-copy"><span class="portfolio-kind">Ferramenta web</span><h3>Calculadora do Pedreiro</h3><p>Cálculos de materiais, mão de obra e orçamento de obra.</p><span class="portfolio-open">Visitar projeto →</span></div></a>
+      <a class="portfolio-item reveal" href="https://sitecandidato2026.vercel.app/" target="_blank" rel="noopener"><div class="portfolio-shot"><img src="assets/portfolio/ricardo-almeida.jpg" alt="Dr. Ricardo Almeida"></div><div class="portfolio-copy"><span class="portfolio-kind">Landing page</span><h3>Dr. Ricardo Almeida</h3><p>Site de campanha com propostas, agenda e contato.</p><span class="portfolio-open">Visitar projeto →</span></div></a>
+      <a class="portfolio-item reveal" href="https://laca-corretores-site.vercel.app/" target="_blank" rel="noopener"><div class="portfolio-shot"><img src="assets/portfolio/laca.jpg" alt="Laca Corretores"></div><div class="portfolio-copy"><span class="portfolio-kind">Imobiliária</span><h3>Laca Corretores</h3><p>Site imobiliário com foco em imóveis e atendimento local.</p><span class="portfolio-open">Visitar projeto →</span></div></a>
+      <a class="portfolio-item reveal" href="https://consumointeligente.vercel.app/" target="_blank" rel="noopener"><div class="portfolio-shot"><img src="assets/portfolio/consumo.jpg" alt="Consumo Inteligente"></div><div class="portfolio-copy"><span class="portfolio-kind">Calculadora</span><h3>Consumo Inteligente</h3><p>Ferramenta para estimar consumo e custo de energia.</p><span class="portfolio-open">Visitar projeto →</span></div></a>
+      <a class="portfolio-item reveal" href="https://jogos-da-galera.vercel.app/" target="_blank" rel="noopener"><div class="portfolio-shot"><img src="assets/portfolio/jogos.jpg" alt="Jogos da Galera"></div><div class="portfolio-copy"><span class="portfolio-kind">Jogo online</span><h3>Jogos da Galera</h3><p>Experiência multiplayer para jogar com amigos.</p><span class="portfolio-open">Visitar projeto →</span></div></a>
+      <a class="portfolio-item reveal" href="https://cecato-bmar.github.io/MRichieri/" target="_blank" rel="noopener"><div class="portfolio-shot"><img src="assets/portfolio/mrichieri.jpg" alt="MRichieri"></div><div class="portfolio-copy"><span class="portfolio-kind">Site jurídico</span><h3>MRichieri</h3><p>Presença digital institucional para serviços jurídicos.</p><span class="portfolio-open">Visitar projeto →</span></div></a>
+      <a class="portfolio-item reveal" href="https://cecato-bmar.github.io/Cursos/" target="_blank" rel="noopener"><div class="portfolio-shot"><img src="assets/portfolio/cursos.jpg" alt="Portal de Cursos"></div><div class="portfolio-copy"><span class="portfolio-kind">Educação</span><h3>Portal de Cursos</h3><p>Landing page de captação para formação digital.</p><span class="portfolio-open">Visitar projeto →</span></div></a>
+      <a class="portfolio-item reveal" href="https://cecato-bmar.github.io/Contabilidade-Padilha/" target="_blank" rel="noopener"><div class="portfolio-shot"><img src="assets/portfolio/contabilidade.jpg" alt="Contabilidade Padilha"></div><div class="portfolio-copy"><span class="portfolio-kind">Institucional</span><h3>Contabilidade Padilha</h3><p>Apresentação de serviços contábeis e geração de contato.</p><span class="portfolio-open">Visitar projeto →</span></div></a>
+      <a class="portfolio-item reveal" href="https://cecato-bmar.github.io/Mariazinha/" target="_blank" rel="noopener"><div class="portfolio-shot"><img src="assets/portfolio/mariazinha.jpg" alt="Doce Infância Mariazinha"></div><div class="portfolio-copy"><span class="portfolio-kind">Catálogo</span><h3>Doce Infância Mariazinha</h3><p>Catálogo digital de doces artesanais.</p><span class="portfolio-open">Visitar projeto →</span></div></a>
+      <a class="portfolio-item reveal" href="https://cecato-bmar.github.io/Doce-Fit-Mariazinha/" target="_blank" rel="noopener"><div class="portfolio-shot"><img src="assets/portfolio/docefit.jpg" alt="Docefit Mariazinha"></div><div class="portfolio-copy"><span class="portfolio-kind">Loja saudável</span><h3>Docefit Mariazinha</h3><p>Vitrine de doces saudáveis com foco em pedidos.</p><span class="portfolio-open">Visitar projeto →</span></div></a>
+      <a class="portfolio-item reveal" href="https://cecato-bmar.github.io/Tenda/" target="_blank" rel="noopener"><div class="portfolio-shot"><img src="assets/portfolio/tenda.jpg" alt="C.E.U.I.C.O.B"></div><div class="portfolio-copy"><span class="portfolio-kind">Institucional</span><h3>C.E.U.I.C.O.B</h3><p>Site institucional com informações, trabalhos e contato.</p><span class="portfolio-open">Visitar projeto →</span></div></a>
     </div>
 
     <div class="port-grid">

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cecato-bmar.github.io/B-MAR-TECH/sitemap.xml
